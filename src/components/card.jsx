@@ -29,16 +29,16 @@ const Card = ({ imageSrc, title, price }) => {
           <div className="capitalize text-cardText font-black text-[15px] leading-[30px] dark:text-white">
             {title}
           </div>
-          <p className=" text-2xl leading-[30px] font-bold text-cardText py-[10px] dark:text-white ">
+          {/* <p className=" text-2xl leading-[30px] font-bold text-cardText py-[10px] dark:text-white ">
             {price}
-          </p>
+          </p> */}
           <p className="text-[13px] leading-[25px] text-blueCardSubTitle font-bold py-[10px]  dark:text-white">
             14 Patrick Brem Ct. Mahwah, NJ07430
           </p>
-          <p className="text-xs leading-5 text-blueCardSubTitle font-bold dark:text-white">
+          {/* <p className="text-xs leading-5 text-blueCardSubTitle font-bold dark:text-white">
             3 Beds&nbsp;&nbsp;-&nbsp;&nbsp;2 baths&nbsp;&nbsp;-&nbsp;&nbsp;3,450
             sqft
-          </p>
+          </p> */}
         </div>
       </div>
     </div>

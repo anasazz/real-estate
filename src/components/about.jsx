@@ -1,72 +1,65 @@
-import Link from 'next/link';
+// pages/About.js
 import React from 'react';
+import Card from './HistoireCard';
 
-export default function About({
-  cardTitle1,
-  cardTitle2,
-  cardTitle3,
-  cardSubText1,
-  cardSubText2,
-  cardSubText3,
-}) {
+export default function About() {
+  const cardListItems = [
+    'Etudes techniques',
+    'Etudes économiques',
+    'Analyses environnementales',
+    'Suivi des travaux d\'exécution',
+    'Ordonnancement Pilotage et Coordination (OPC)',
+    'Management de la qualité',
+    'Assistance à l’exploitation et à la maintenance',
+    'Planification, Préparation des projets',
+    'Préparation des termes de références',
+    'Assistance pour l’évaluation des offres et la sélection des entreprises',
+    'Suivi et pilotage des études et des investigations',
+    'Assistance tout au long de la vie des projets'
+  ];
+
   return (
-    <div id="about-container" className="relative p-4 mb-4">
+    <div id="about-container" className="relative p-6 mb-8 bg-gray-50 dark:bg-slate-800">
       <div className="flex justify-center items-center">
-        <button className="relative mt-24 bg-green-200  hover:bg-green-600 px-4 py-1 rounded-2xl text-green-500 hover:text-white h-8 w-28 font-black text-xs uppercase cursor-pointer ">
-          Our Story
+        <button className="mt-24 bg-green-200 hover:bg-green-600 px-6 py-2 rounded-3xl text-green-600 hover:text-white h-10  font-semibold text-sm uppercase cursor-pointer transition duration-300 ease-in-out transform hover:scale-105">
+          Notre MISSION
         </button>
       </div>
 
-      <div className="relative ">
-        <div className="flex flex-col justify-center items-center mt-20">
-          <p
-            className="text-9xl sm:text-10xl text-blue-700 opacity-5 font-black text-center z-0 absolute top-0 left-0 w-full dark:text-white
-          "
-          >
-            OUR STORY
+      <div className="relative mt-16">
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-9xl sm:text-10xl text-blue-700 opacity-10 font-extrabold text-center z-0 absolute top-0 left-0 w-full dark:text-white">
+            NOTRE MISSION
           </p>
-          <p className="text-4xl text-blue-900 font-bold text-center z-20 relative mt-16 dark:text-gray-300">
-            We Will Find the Best Option
+          <p className="text-2xl text-blue-900 font-semibold text-center z-20 relative mt-16 dark:text-gray-300">
+            Basé à Rabat, le BET CEP est un bureau d'études techniques pluridisciplinaire.
+          </p>
+          <p className="text-xl text-blue-700 font-medium text-center z-20 relative mt-8 dark:text-gray-300">
+            Le BET CEP intervient sur les projets du génie civil, des bâtiments, de transport et d’hydraulique.
           </p>
         </div>
       </div>
 
-      <div className="relative justify-center items-center">
-        <p className="font-medium text-base text-center mt-20  text-bluePText">
-          Real estate is &quot;property consisting of land and the buildings on
-          it, along with its natural resources such as crops,
-          <br /> minerals or water, immovable property of this nature; an
-          interest vested in this (also) an item of real property,
-          <br /> (more generally) buildings or housing in general.
-        </p>
+      <div className="flex flex-col sm:flex-row justify-center items-center mt-16 space-x-10">
+        <Card
+          title="Nos Missions"
+          description="Le BET CEP assure les missions de la maîtrise d’œuvre, y compris les études techniques, les études économiques, les analyses environnementales, et le suivi des travaux d'exécution."
+        />
+        <Card
+          title="Nos Services"
+          description="Nous offrons des services comme l'ordonnancement, le pilotage et la coordination (OPC), la gestion de la qualité, ainsi que l'assistance à l’exploitation et à la maintenance."
+        />
+   
       </div>
+      <br/>
+      <Card
+          title="Assistance à Maîtrise d'Ouvrage"
+          listItems={cardListItems}
+        />
 
-      <div className="flex flex-col sm:flex-row justify-center items-center mt-[50px] ml-[28px]">
-        <div className="bg-white  py-35 px-10 h-[160px] w-[350px] mr-[30px] flex flex-col justify-center items-center rounded-[10px] shadow-md mb-5 dark:bg-slate-700">
-          <p className="font-medium text-3xl leading-[50px] text-blueCardTitle capitalize dark:text-gray-100">
-            {cardTitle1}
-          </p>
-          <p className="text-sm leading-8 text-center text-blueCardSubTitle dark:text-white">
-            {cardSubText1}
-          </p>
-        </div>
-        <div className="bg-white py-35 px-10 h-[160px] w-[350px] mr-[30px] flex flex-col justify-center items-center rounded-[10px] shadow-md mb-5 dark:bg-slate-700">
-          <p className="font-medium text-3xl leading-[50px] text-blueCardTitle capitalize dark:text-gray-100">
-            {cardTitle2}
-          </p>
-          <p className="text-sm leading-8 text-center text-blueCardSubTitle dark:text-white">
-            {cardSubText2}
-          </p>
-        </div>
-        <div className="bg-white py-35 px-10 h-[160px] w-[350px] mr-[30px] flex flex-col justify-center items-center rounded-[10px] shadow-md mb-5 dark:bg-slate-700">
-          <p className="font-medium text-3xl leading-[50px] text-blueCardTitle capitalize dark:text-gray-100">
-            {cardTitle3}
-          </p>
-          <p className="text-sm leading-8 text-center text-blueCardSubTitle dark:text-white">
-            {cardSubText3}
-          </p>
-        </div>
-      </div>
+  
+
+ 
     </div>
   );
 }
