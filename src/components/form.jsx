@@ -11,6 +11,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+{/* eslint-disable-next-line react/no-unescaped-entities */}
 
 const schema = yup.object().shape({
   firstName: yup.string().required('Le prénom est requis'),

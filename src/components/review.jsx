@@ -5,6 +5,8 @@ import userImg from '../assets/images/user1.png';
 import userImg1 from '../assets/images/user2.png';
 import userImg2 from '../assets/images/user3.png';
 
+{/* eslint-disable-next-line react/no-unescaped-entities */}
+
 const Review = () => {
   return (
     <div id="avis" className="relative p-4 mb-4">

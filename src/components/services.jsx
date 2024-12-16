@@ -7,6 +7,9 @@ import warehouseIcon from '../assets/icons/warehouse.png';
 import parkingIcon from '../assets/icons/parking.png';
 import Link from 'next/link';
 
+
+{/* eslint-disable-next-line react/no-unescaped-entities */}
+
 const Services = () => {
   return (
     <div id="services" className="relative p-4 mb-4">

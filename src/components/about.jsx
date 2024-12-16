@@ -2,6 +2,8 @@
 import React from 'react';
 import Card from './HistoireCard';
 
+{/* eslint-disable-next-line react/no-unescaped-entities */}
+
 export default function About() {
   const cardListItems = [
     'Etudes techniques',
