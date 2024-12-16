@@ -11,7 +11,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import searchIcon from '../../src/assets/icons/search.png';
+import logoImg from '../../src/assets/images/logo.jpeg';
 
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import ThemeChanger from './themeChanger';
@@ -57,12 +57,8 @@ const Header = () => {
       {/* Menu + Name */}
       <div className="max-w-[1240px] mx-5 flex justify-between items-center">
         <Link href="/">
-          <h1
-            style={{ color: `${headerText}` }}
-            className=" text-2xl font-bold hover:text-orange-500"
-          >
-            BetCep.ma
-          </h1>
+        <Image src={logoImg} className='h-20 w-40'  />
+        
         </Link>
       </div>
 

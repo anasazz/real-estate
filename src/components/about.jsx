@@ -5,13 +5,18 @@ import Card from './HistoireCard';
 {/* eslint-disable-next-line react/no-unescaped-entities */}
 
 export default function About() {
-  const cardListItems = [
+  const cardListItems1 = [
     'Etudes techniques',
     'Etudes économiques',
     'Analyses environnementales',
     'Suivi des travaux d\'exécution',
     'Ordonnancement Pilotage et Coordination (OPC)',
     'Management de la qualité',
+
+  ];
+  const cardListItems = [
+
+
     'Assistance à l’exploitation et à la maintenance',
     'Planification, Préparation des projets',
     'Préparation des termes de références',
@@ -55,9 +60,16 @@ export default function About() {
       </div>
       <br/>
       <Card
-          title="Assistance à Maîtrise d'Ouvrage"
+          title="Département études :"
+          listItems={cardListItems1}
+        />
+
+
+<Card
+          title="Département gestion de projets :"
           listItems={cardListItems}
         />
+
 
   
 

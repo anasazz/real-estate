@@ -48,10 +48,10 @@ const HomePage = () => {
         <Hero
           address="
 Avenue Hassan II 
-Rabat، Rabat-Salé-Kénitra 10060، MA
+Rabat 10060  MA
 "
-          phone="(929) 123-4567"
-          email="contact@betcep.ma"
+          phone="+212 662 441 303 - +212 651 680 188"
+          email="Contact.betcep@gmail.com"
         />
 
         <About
