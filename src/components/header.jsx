@@ -11,7 +11,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
-import logoImg from '../../src/assets/images/logo.jpeg';
+import logoImg from '../../src/assets/images/logo.png';
 
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import ThemeChanger from './themeChanger';
@@ -39,8 +39,8 @@ const Header = () => {
   useEffect(() => {
     const handleColorChange = () => {
       if (window.scrollY >= 250) {
-        setHeaderColor('linear-gradient(to right, black, lightblue)');
-        setHeaderText('#ffffff');
+        setHeaderColor('linear-gradient(to right, white, lightblue)');
+        setHeaderText('#333');
       } else {
         setHeaderColor('transparent');
         setHeaderText('#ffffff');

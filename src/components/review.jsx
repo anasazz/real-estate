@@ -21,14 +21,14 @@ const Review = () => {
             Avis
           </p>
           <p className="text-4xl text-blue-900 font-bold text-center z-20 relative capitalize mt-10 sm:mt-28 dark:text-gray-300">
-            Ce que disent nos clients sur nos solutions énergétiques
+            Ce que disent nos clients sur nos solutions 
           </p>
         </div>
       </div>
 
       <div className="relative justify-center items-center">
         <p className="font-medium text-base text-center mt-20 text-bluePText">
-          &quot;Les solutions énergétiques que nous avons installées ont changé notre façon de consommer l'énergie, 
+          &quot;Les solutions  que nous avons installées , 
           <br /> offrant à la fois efficacité et économies, tout en respectant l'environnement.&quot;
         </p>
       </div>
