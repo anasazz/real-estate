@@ -56,9 +56,9 @@ const Services = () => {
               key={index}
               className="flex flex-col justify-center items-center px-6"
             >
-              <div className="bg-white h-[120px] w-[120px] flex flex-col justify-center items-center rounded-full p-[10px] gap-[10px] mb-5 dark:bg-gray-700">
+              <div className="bg-slate-50 h-[200px] w-[120px] flex flex-col justify-center items-center rounded-md  p-[30px] gap-[10px] mb-5  dark:bg-gray-700">
                 <Image src={service.icon} alt={service.alt} width={40} height={40} />
-                <p className="font-bold text-xs leading-6 text-center text-blueCardTitle dark:text-gray-200">
+                <p className="font-bold  text-xs leading-6 text-center text-blueCardTitle dark:text-gray-200">
                   {service.title}
                 </p>
               </div>

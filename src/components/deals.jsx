@@ -5,7 +5,7 @@ const Deals = () => {
   return (
     <div id="deals" className="relative p-4 mb-4">
       <div className="flex justify-center items-center  p-3">
-        <button className="mt-[90px] mb-4 bg-orange-200 hover:bg-orange-600 px-4 py-1 rounded-2xl text-orange-500 hover:text-white h-8 w-28 font-black text-xs uppercase cursor-pointer ">
+        <button className="mt-[90px] mb-4 bg-blue-200 hover:bg-blue-600 px-4 py-1 rounded-2xl text-blue-500 hover:text-white h-8 w-28 font-black text-xs uppercase cursor-pointer ">
           deals
         </button>
       </div>

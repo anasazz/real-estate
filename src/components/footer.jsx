@@ -1,118 +1,85 @@
-import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import starIcon from '../assets/icons/starIcon.png';
-import rightArrowIcon from '../assets/icons/rightArrowIcon.png';
+import Image from 'next/image';
+import React from 'react';
+import logoImg from '../../src/assets/images/logo.png'; // Ensure you have the correct path for the logo image
+import linkedInLogo from '../../src/assets/images/linkedin.png'; // Make sure you have the LinkedIn logo
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
+  const footerLinks = [
+    { label: 'Accueil', href: '#' },
+    { label: 'Nos missions', href: '#missions' },
+    { label: 'Nos Projets', href: '#projets' },
+    { label: 'Références', href: '#references' },
+    { label: 'Agréments', href: '#agrements' },
+    { label: 'Ressources humaines', href: '#resources' },
+    { label: 'Contactez-nous', href: '#contact' },
+  ];
 
   return (
-    <div className="relative p-4 mb-4 mx-[10px] border-t-2 border-solid border-[#EDEFF2]">
-      {/* Row 1 */}
-      <div className="sm:flex justify-center items-center py-[20px] sm:py-[90px] px-2 ">
-        {/* text  */}
-        <p className="text-2xl text-center leading-[30px] font-bold text-[#4D5E80] capitalize mb-10 sm:mb-0 dark:text-white">
-          Betcep.ma
-        </p>
-        {/* menu  */}
-        <div className="relative flex gap-5 justify-center items-centers  sm:w-[450px] ">
-          {/* <ul className="grid  sm:grid-cols-3 gap-5 text-center sm:gap-10 ">
-            <li>
-              <Link href="/" className="py-2 hover:text-orange-500">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="py-2 hover:text-orange-500">
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="py-2 hover:text-orange-500">
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="py-2 hover:text-orange-500">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="py-2 hover:text-orange-500">
-                Deals
-              </Link>
-            </li>
-            <li>
-              <Link href="/" className="py-2 hover:text-orange-500">
-                Contacts
-              </Link>
-            </li>
-          </ul> */}
-        </div>
-        {/* rating */}
-        <div className="flex flex-col items-center sm:items-start gap-1 mt-5 sm:mt-0">
-          <div className="flex">
-            <Image
-              src={starIcon}
-              alt="ratings "
-              className="w-[30px] h-[30px]"
-            />
-            <Image
-              src={starIcon}
-              alt="ratings "
-              className="w-[30px] h-[30px]"
-            />
-            <Image
-              src={starIcon}
-              alt="ratings "
-              className="w-[30px] h-[30px]"
-            />
-            <Image
-              src={starIcon}
-              alt="ratings "
-              className="w-[30px] h-[30px]"
-            />
-            <Image
-              src={starIcon}
-              alt="ratings "
-              className="w-[30px] h-[30px]"
-            />
-          </div>
-          <div className="flex justify-center items-center p-2">
-            <p>1.2K satisfied customers</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Row 2 */}
-      <div className="relative py-0 px=[340px] border-t-2 border-solid border-[#EDEFF2] flex items-center justify-between gap-5">
-        <p className="capitalize text-[10px] sm:text-[13px] font-semibold leading-[25px] text-center text-bluePText dark:text-white">
-          © {currentYear} BetCep. All Rights Reserved.
-        </p>
-        <Link
-  href="mailto:anasazzouz8@gmail.com"
-  className="capitalize text-[10px] sm:text-[13px] font-semibold leading-[25px] text-center text-bluePText hover:text-orange-500 dark:text-white"
->
-   designed by azz
-</Link>
-
-        <div className="flex items-start p-4 gap-[57px]">
-          <Link
-            href="#"
-            className="capitalize text-[10px] sm:text-[13px] font-semibold leading-[25px] text-center text-bluePText hover:text-orange-500 dark:text-white"
-          >
-            terms
-          </Link>
-          <Link
-            href="#"
-            className="capitalize text-[10px] sm:text-[13px] font-semibold leading-[25px] text-center text-bluePText hover:text-orange-500 dark:text-white"
-          >
-            privacy
+    <footer className="bg-gray-800 text-white py-6">
+      <div className="max-w-[1240px] mx-auto px-5">
+        {/* Logo Section */}
+        <div className="flex justify-center mb-4">
+          <Link href="/">
+            <Image src={logoImg} alt="Company Logo" className="h-16 w-auto" />
           </Link>
         </div>
-      </div>
+
+        {/* Footer Links */}
+        <div className="flex flex-wrap justify-center mb-6">
+          {footerLinks.map((link, index) => (
+            <div key={index} className="px-4 py-2">
+              <Link href={link.href}>
+                <span className="text-sm text-gray-300 hover:text-blue-500 cursor-pointer">{link.label}</span>
+              </Link>
+            </div>
+          ))}
+        </div>
+
+     {/* Contact Information */}
+     <div className="bg-gray-700 py-6 mb-6">
+  <h3 className="text-xl font-semibold text-center text-gray-100 mb-4">Contactez-nous</h3>
+  
+  <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-x-8 sm:space-y-0">
+    {/* Phone */}
+    <div className="flex items-center space-x-2">
+      <span className="text-xl text-gray-300">📞</span>
+      <a href="tel:+212662441303" className="text-sm text-gray-300 hover:text-blue-500">
+        +212662441303
+      </a>
     </div>
+    
+    {/* Email */}
+    <div className="flex items-center space-x-2">
+      <span className="text-xl text-gray-300">✉️</span>
+      <a href="mailto:Contact.betcep@gmail.com" className="text-sm text-gray-300 hover:text-blue-500">
+        Contact.betcep@gmail.com
+      </a>
+    </div>
+    
+    {/* Address */}
+    <div className="flex items-center space-x-2">
+      <span className="text-xl text-gray-300">🏢</span>
+      <p className="text-sm text-gray-300">Avenue Hassan II Rabat 10060 MA</p>
+    </div>
+  </div>
+</div>
+
+
+        {/* Footer Bottom Section */}
+        <div className="flex justify-between items-center border-t border-gray-700 pt-4">
+          <p className="text-sm text-gray-400">
+            &copy; {new Date().getFullYear()} - Betcep.ma. All Rights Reserved.
+          </p>
+          <div className="flex space-x-4">
+            {/* Social Media Links - Add relevant social icons */}
+            <Link target='_blank' href="https://www.linkedin.com/company/bet-capitale-etudes-projets-cep/">
+              <Image src={linkedInLogo} alt="LinkedIn Logo" className="h-10 w-40 cursor-pointer" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
   );
 };
 

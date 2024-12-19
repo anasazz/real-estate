@@ -1,13 +1,3 @@
-
-//   Accueil
-// Nos missions
-// Nos Projets
-// Références
-// Agréments
-// Ressources humaines
-// Contactez-nous
-
-
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
@@ -23,6 +13,7 @@ const Header = () => {
 
   const navLinks = [
     { label: 'Accueil', href: '#' },
+    { label: 'Projets de référence', href: '#references' },
     { label: 'Services', href: '#services' },
     { label: 'Avis', href: '#avis' },
     { label: 'Contact', href: '#contact' },
@@ -52,47 +43,53 @@ const Header = () => {
   return (
     <div
       style={{ background: `${headerColor}` }}
-      className=" fixed top-0 left-0 w-full py-2 flex justify-between items-center z-40 ease-in duration-300"
+      className="fixed top-0  left-0 w-full py-2 flex justify-between items-center z-40 ease-in duration-300"
     >
       {/* Menu + Name */}
-      <div className="max-w-[1240px] mx-5 flex justify-between items-center">
+      <div className="max-w-[1240px]  mx-5 flex justify-between items-center">
         <Link href="/">
-        <Image src={logoImg} className='h-20 w-40'  />
-        
+          <Image src={logoImg} className='h-20  w-40' />
         </Link>
       </div>
-
-      {/* Search */}
-      {/* <div className=" hidden sm:flex">
-        <Image src={searchIcon} alt="Search" className="w-4 h-4 self-center" />
-        <input
-          type="text"
-          placeholder="Search"
-          maxLength="20"
-          className="w-40 bg-transparent outline-none placeholder-gray-300 mx-4 py-2 text-white capitalize"
-        />
-      </div> */}
 
       {/* Navbar Links */}
       <ul
         style={{ color: `${headerText}` }}
-        className="text-sm font-bold hidden sm:flex"
+        className="text-md font-bold hidden sm:flex"
       >
         {navLinks.map((link, index) => (
-          <li key={index} className="px-4 hover:text-orange-500">
+          <li key={index} 
+          className="px-4 text-2xl hover:text-blue-500"
+          >
             <Link href={link.href}>{link.label}</Link>
           </li>
         ))}
       </ul>
 
-      <p
-        style={{ color: `${headerText}` }}
-        className="hidden bg-green-500 px-5 py-3 radius-9 sm:flex text-sm font-bold ml-10 mr-5 hover:text-orange-500 cursor-pointer"
-      >
-      <Link href={'#contact'}>  Nous Contactez</Link>
+      <div className="flex space-x-4">
+        {/* Contact Link */}
+    
+        {/* WhatsApp Link */}
+        <a
+          href="https://wa.me/+212662441303"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-md font-bold ml-10 text-white hover:text-green-500"
+        >
+          WhatsApp
+        </a>
+        
+        {/* LinkedIn Link */}
+        <a
+          href="https://www.linkedin.com/company/bet-capitale-etudes-projets-cep/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-md font-bold ml-10 text-white hover:text-blue-500"
+        >
+          LinkedIn
+        </a>
+      </div>
 
-      
-      </p>
       <div className="mr-10">
         <ThemeChanger />
       </div>
@@ -117,7 +114,7 @@ const Header = () => {
           className="text-sm font-bold"
         >
           {navLinks.map((link, index) => (
-            <li key={index} className="mx-7 py-4 text-4xl hover:text-orange-500">
+            <li key={index} className="mx-7 py-4 text-4xl hover:text-blue-500">
               <Link href={link.href} onClick={handleMobileHeader}>
                 {link.label}
               </Link>
