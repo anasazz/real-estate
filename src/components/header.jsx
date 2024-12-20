@@ -81,7 +81,7 @@ const Header = () => {
         
         {/* LinkedIn Link */}
         <a
-          href="https://www.linkedin.com/company/bet-capitale-etudes-projets-cep/"
+          href="https://www.linkedin.com/in/bet-capitale-etudes-projets-cep-5b1224262/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-md font-bold ml-10 text-white hover:text-blue-500"

@@ -3,7 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import thumbPdf from '../../public/pdfs/thumb.png';
-import instaIcon from '../assets/icons/instaIcon.png';
+import att1 from '../assets/AttestationDeReferances/1.jpg';
+import att2 from '../assets/AttestationDeReferances/2.jpg';
+import att3 from '../assets/AttestationDeReferances/3.jpg';
 
 const AttestationDeReference = () => {
   return (
@@ -15,8 +17,8 @@ const AttestationDeReference = () => {
       </div>
       <div className="relative">
         <div className="flex flex-col justify-center items-center">
-          <p className="text-9xl sm:text-[160px] text-blue-700 opacity-5 font-black text-center z-0 absolute top-0 left-0 w-full uppercase dark:text-white">
-            Attestation de Référence
+          <p className="text-2xl sm:text-[160px] text-blue-700 opacity-5 font-black text-center z-0 absolute top-0 left-0 w-full uppercase dark:text-white">
+            Attestations
           </p>
           <p className="text-2xl sm:text-4xl text-blue-900 font-bold text-center z-20 relative capitalize mt-[55px] dark:text-gray-300">
             Cliquez pour voir les attestations de référence{' '}
@@ -30,23 +32,23 @@ const AttestationDeReference = () => {
           {/* Clickable PDF Thumbnails */}
           <Link href="/pdfs/AttestationDeReferance1.pdf" target="_blank">
             <Image
-              src={thumbPdf}
+              src={att1}
               alt="Attestation PDF 1"
-              className="mx-5 my-3 w-[255px] h-[255px] rounded-lg hover:scale-110 ease-in duration-200 cursor-pointer"
+              className="mx-5 my-3 w-[355px] h-[355px] rounded-lg hover:scale-110 ease-in duration-200 cursor-pointer"
             />
           </Link>
           <Link href="/pdfs/AttestationDeReferance2.pdf" target="_blank">
             <Image
-              src={thumbPdf}
+              src={att2}
               alt="Attestation PDF 2"
-              className="mx-5 my-3 w-[255px] h-[255px] rounded-lg hover:scale-110 ease-in duration-200 cursor-pointer"
+              className="mx-5 my-3 w-[355px] h-[355px] rounded-lg hover:scale-110 ease-in duration-200 cursor-pointer"
             />
           </Link>
           <Link href="/pdfs/AttestationDeReferance3.pdf" target="_blank">
             <Image
-              src={thumbPdf}
+              src={att3}
               alt="Attestation PDF 3"
-              className="mx-5 my-3 w-[255px] h-[255px] rounded-lg hover:scale-110 ease-in duration-200 cursor-pointer"
+              className="mx-5 my-3 w-[355px] h-[355px] rounded-lg hover:scale-110 ease-in duration-200 cursor-pointer"
             />
           </Link>
         </div>

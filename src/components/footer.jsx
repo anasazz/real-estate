@@ -73,7 +73,7 @@ const Footer = () => {
           </p>
           <div className="flex space-x-4">
             {/* Social Media Links - Add relevant social icons */}
-            <Link target='_blank' href="https://www.linkedin.com/company/bet-capitale-etudes-projets-cep/">
+            <Link target='_blank' href="https://www.linkedin.com/in/bet-capitale-etudes-projets-cep-5b1224262/">
               <Image src={linkedInLogo} alt="LinkedIn Logo" className="h-10 w-40 cursor-pointer" />
             </Link>
           </div>
